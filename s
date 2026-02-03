@@ -1,29 +1,23 @@
 function fy
-    # 1. dnf'i sessiz modda çalıştır ve sadece içinde ":" olan satırları al
-    # Bu sayede başlıklar ve uyarılar elenmiş olur.
-    set -l results (dnf search -q $argv | string match -r ".+ : .+")
+    # 1. dnf'i sessizce çalıştır ve ham sonucu bir değişkene ata
+    set -l raw_results (dnf search -q $argv)
 
-    # 2. Eğer hala sonuç yoksa, metadata önbelleği boş olabilir
-    if not set -q results[1]
-        echo "⚠️  Paket bulunamadı. Önbelleği güncellemeyi deneyebilirsin: 'sudo dnf makecache'"
+    # 2. Eğer değişken boşsa dnf gerçekten bir şey bulamamıştır
+    if test -z "$raw_results"
+        echo "❌ dnf arama sonucu boş döndü. 'sudo dnf makecache' gerekebilir."
         return 1
     end
 
-    # 3. fzf ile seçim ekranı
-    set -l selections (printf "%s\n" $results | fzf --multi \
-        --preview "dnf info -q (string split -m 1 ' : ' {})[1]" \
-        --header "TAB: Çoklu Seçim | Enter: Kur | ESC: Çık")
+    # 3. Sonuçları fzf'e gönder (Hiçbir filtreleme yapmadan!)
+    # İlk kelimeyi (paket adını) otomatik ayıklayacak.
+    set -l selection (printf "%s\n" $raw_results | fzf --header "Paketi seç ve Enter'a bas" --preview "dnf info -q (string split ' ' {})[1]")
 
-    # 4. Seçim yapıldıysa paketleri ayıkla ve kur
-    if test -n "$selections"
-        set -l pkgs
-        for line in $selections
-            set -a pkgs (string split -m 1 " : " $line)[1]
-        end
-        
-        echo "📦 Kuruluyor: $pkgs"
-        sudo dnf install $pkgs
+    # 4. Seçim yapıldıysa paketi kur
+    if test -n "$selection"
+        set -l pkg (string split " " $selection)[1]
+        echo "📦 Kuruluyor: $pkg"
+        sudo dnf install $pkg
     else
-        echo "❌ İşlem iptal edildi."
+        echo "🚫 Seçim yapılmadı."
     end
 end
