@@ -1,31 +1,35 @@
 function fy
-    # 1. dnf search çıktısını al ve sadece paket satırlarını süz
-    set -l results (dnf search -q $argv | string match -r '.+ : .+')
-
-    if test -z "$results"
-        echo "❌ '$argv' için paket bulunamadı."
+    # 1. dnf search'ü standart dilde ve sessizce çalıştır
+    set -l query (string join " " $argv)
+    if test -z "$query"
+        echo "❌ Bir paket adı girin (Örn: fy htop)"
         return 1
     end
 
-    # 2. fzf ile seçim yap
-    set -l selection (printf "%s\n" $results | fzf --header "ENTER: Kur | ESC: Çık" --preview "dnf info -q (string split -m 1 ' ' {1})")
+    # 2. Arama sonuçlarını al ve sadece paket isimlerinin olduğu satırları temizle
+    set -l results (LC_ALL=C dnf search -q $query | string match -r ".+ : .+")
+
+    if test -z "$results"
+        echo "❌ '$query' için paket bulunamadı."
+        return 1
+    end
+
+    # 3. FZF Ekranı
+    # --with-nth 1.. : Sadece paket ismi ve açıklamayı gösterir
+    # --delimiter " : " : Ayırıcıyı belirler
+    set -l selection (printf "%s\n" $results | fzf --header "Seç ve Enter'a bas" --preview "dnf info -q (string split -m 1 ' ' {1})")
 
     if test -n "$selection"
-        # --- CERRAHİ İŞLEM BAŞLIYOR ---
+        # --- KRİTİK AYIKLAMA KISMI ---
+        # Sadece " : " işaretinden öncesini al
+        set -l full_pkg (string split -m 1 " : " -- $selection)[1]
         
-        # A. Satırın en başındaki ilk kelimeyi al (Örn: "neofetch.noarch")
-        set -l full_name (string split -m 1 " " -- $selection)[1]
-        
-        # B. Sonundaki iki nokta (:) varsa temizle
-        set -l pkg_name (string replace -r ":\$" "" $full_name)
-        
-        # C. MİMARİ TEMİZLİĞİ (Uyuşmazlığı çözen kısım)
-        # .aarch64, .noarch veya .x86_64 eklerini ismin sonundan atar
-        set -l clean_pkg (string replace -r '\.(aarch64|noarch|x86_64|riscv64)$' '' $pkg_name)
-        
-        echo "📦 Tespit edilen paket: $clean_pkg (Ham veri: $full_name)"
+        # Paket ismindeki .aarch64, .noarch gibi ekleri ve olası boşlukları temizle
+        set -l clean_pkg (string replace -r '\.(aarch64|noarch|x86_64)$' '' $full_pkg | string trim)
+
+        echo "📦 Yükleniyor: $clean_pkg"
         sudo dnf install $clean_pkg
     else
-        echo "🚫 Seçim yapılmadı."
+        echo "🚫 İşlem iptal edildi."
     end
 end
