@@ -1,21 +1,30 @@
 function fy
-    # 1. dnf'i sessizce çalıştır ve ham sonucu bir değişkene ata
-    set -l raw_results (dnf search -q $argv)
-
-    # 2. Eğer değişken boşsa dnf gerçekten bir şey bulamamıştır
-    if test -z "$raw_results"
-        echo "❌ dnf arama sonucu boş döndü. 'sudo dnf makecache' gerekebilir."
+    # 1. Girdi kontrolü
+    if test -z "$argv"
+        echo "❌ Lütfen bir arama terimi girin."
         return 1
     end
 
-    # 3. Sonuçları fzf'e gönder (Hiçbir filtreleme yapmadan!)
-    # İlk kelimeyi (paket adını) otomatik ayıklayacak.
-    set -l selection (printf "%s\n" $raw_results | fzf --header "Paketi seç ve Enter'a bas" --preview "dnf info -q (string split ' ' {})[1]")
+    # 2. Arama yap ve sonuçları bir listeye (array) al
+    # 'dnf search' çıktısındaki başlıkları ve boşlukları temizler
+    set -l results (dnf search -q $argv | string match -r '.+ : .+')
 
-    # 4. Seçim yapıldıysa paketi kur
+    if test -z "$results"
+        echo "❌ '$argv' için paket bulunamadı."
+        return 1
+    end
+
+    # 3. fzf ile seçim yap
+    set -l selection (string join \n $results | fzf --header "ENTER: Kur | ESC: Çık" --preview "dnf info -q (string split -m 1 ' ' {1})")
+
+    # 4. Seçilen satırdan paket ismini temiz bir şekilde ayıkla
     if test -n "$selection"
-        set -l pkg (string split " " $selection)[1]
-        echo "📦 Kuruluyor: $pkg"
+        # Sadece ilk kelimeyi al ve olası ":" işaretlerini temizle
+        set -l pkg (string split -m 1 " " -- $selection)[1]
+        
+        # Eğer dnf bazen "paket.mimarisi" şeklinde veriyorsa sadece "paket" kısmını alalım
+        # Ama dnf genelde tam ismi kabul eder.
+        echo "📦 Paket kuruluyor: $pkg"
         sudo dnf install $pkg
     else
         echo "🚫 Seçim yapılmadı."
