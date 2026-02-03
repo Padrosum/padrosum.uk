@@ -1,35 +1,34 @@
 function fy
-    # 1. dnf search'ü standart dilde ve sessizce çalıştır
-    set -l query (string join " " $argv)
-    if test -z "$query"
-        echo "❌ Bir paket adı girin (Örn: fy htop)"
+    # 1. Giriş kontrolü
+    if test -z "$argv"
+        echo "❌ Lütfen aranacak paketi yaz."
         return 1
     end
 
-    # 2. Arama sonuçlarını al ve sadece paket isimlerinin olduğu satırları temizle
-    set -l results (LC_ALL=C dnf search -q $query | string match -r ".+ : .+")
+    # 2. Arama: Sadece içinde " : " olan satırları al (Gereksiz başlıkları eler)
+    # grep kullanarak dnf çıktısını temizliyoruz, Fish karışmıyor.
+    set -l results (dnf search -q $argv | grep ' : ')
 
     if test -z "$results"
-        echo "❌ '$query' için paket bulunamadı."
+        echo "❌ Sonuç bulunamadı."
         return 1
     end
 
-    # 3. FZF Ekranı
-    # --with-nth 1.. : Sadece paket ismi ve açıklamayı gösterir
-    # --delimiter " : " : Ayırıcıyı belirler
-    set -l selection (printf "%s\n" $results | fzf --header "Seç ve Enter'a bas" --preview "dnf info -q (string split -m 1 ' ' {1})")
+    # 3. FZF Seçimi
+    # awk '{print $1}' ile sadece paket ismini (ve mimarisini) alıp dnf info'ya gönderiyoruz
+    set -l selection (printf "%s\n" $results | fzf --reverse --header "Seç ve Enter'a bas" --preview "dnf info -q (echo {} | awk '{print \$1}')")
 
     if test -n "$selection"
-        # --- KRİTİK AYIKLAMA KISMI ---
-        # Sadece " : " işaretinden öncesini al
-        set -l full_pkg (string split -m 1 " : " -- $selection)[1]
+        # 4. TEMİZLİK (Flag hatasını çözen kısım)
+        # awk ile satırın ilk kelimesini al (paket.mimari)
+        set -l raw_pkg (echo "$selection" | awk '{print $1}')
         
-        # Paket ismindeki .aarch64, .noarch gibi ekleri ve olası boşlukları temizle
-        set -l clean_pkg (string replace -r '\.(aarch64|noarch|x86_64)$' '' $full_pkg | string trim)
+        # sed ile sondaki nokta ve sonrasını (.aarch64, .noarch, .x86_64) sil
+        set -l final_pkg (echo "$raw_pkg" | sed 's/\.[^.]*$//')
 
-        echo "📦 Yükleniyor: $clean_pkg"
-        sudo dnf install $clean_pkg
+        echo "📦 Kuruluyor: $final_pkg"
+        sudo dnf install $final_pkg
     else
-        echo "🚫 İşlem iptal edildi."
+        echo "🚫 İptal."
     end
 end
