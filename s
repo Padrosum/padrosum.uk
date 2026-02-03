@@ -1,31 +1,26 @@
 function fy
-    # 1. Girdi kontrolü
-    if test -z "$argv"
-        echo "❌ Lütfen bir arama terimi girin."
+    # 1. dnf'i standart dilde ve sessizce çalıştır
+    # Hiçbir filtreleme (string match) yapmıyoruz, dnf ne verirse o.
+    set -l raw_output (LC_ALL=C dnf search -q $argv)
+
+    # 2. Eğer dnf gerçekten boş döndüyse uyar
+    if test -z "$raw_output"
+        echo "❌ dnf arama sonucu tamamen boş döndü. 'sudo dnf makecache' gerekebilir."
         return 1
     end
 
-    # 2. Arama yap ve sonuçları bir listeye (array) al
-    # 'dnf search' çıktısındaki başlıkları ve boşlukları temizler
-    set -l results (dnf search -q $argv | string match -r '.+ : .+')
+    # 3. fzf ile seçim ekranı (Ham çıktıyı gösteriyoruz)
+    # Preview kısmında sadece seçili satırın ilk kelimesine (paket adı) odaklanıyoruz
+    set -l selection (printf "%s\n" $raw_output | fzf --header "Paketi seç ve Enter'a bas" --preview "LC_ALL=C dnf info -q (string split ' ' {1})[1]")
 
-    if test -z "$results"
-        echo "❌ '$argv' için paket bulunamadı."
-        return 1
-    end
-
-    # 3. fzf ile seçim yap
-    set -l selection (string join \n $results | fzf --header "ENTER: Kur | ESC: Çık" --preview "dnf info -q (string split -m 1 ' ' {1})")
-
-    # 4. Seçilen satırdan paket ismini temiz bir şekilde ayıkla
+    # 4. Seçilen satırdan paket ismini cımbızla çekelim
     if test -n "$selection"
-        # Sadece ilk kelimeyi al ve olası ":" işaretlerini temizle
+        # Satırı boşluklardan böl ve ilk kelimeyi al, sonra olası ':' işaretini temizle
         set -l pkg (string split -m 1 " " -- $selection)[1]
+        set -l clean_pkg (string replace -r ":\$" "" $pkg)
         
-        # Eğer dnf bazen "paket.mimarisi" şeklinde veriyorsa sadece "paket" kısmını alalım
-        # Ama dnf genelde tam ismi kabul eder.
-        echo "📦 Paket kuruluyor: $pkg"
-        sudo dnf install $pkg
+        echo "📦 Kuruluyor: $clean_pkg"
+        sudo dnf install $clean_pkg
     else
         echo "🚫 Seçim yapılmadı."
     end
