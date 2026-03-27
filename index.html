@@ -3,353 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kişisel Web Sitesi - Padros ">
-    <title>Padros - Kişisel Website</title>
-    
+    <title>Alihan Padros Karakuş </title>
     <style>
-        /* --- AYARLAR VE DEĞİŞKENLER --- */
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
         :root {
-            /* Aydınlık Mod (Varsayılan - Kağıt Hissi) */
-            --bg-color: #fdfdfd;
-            --container-bg: #ffffff;
-            --text-color: #2a2a2a;
-            --meta-color: #666;
-            --link-color: #a61c1c; /* Klasik Bordo/Kırmızı */
-            --border-color: #e0e0e0;
-            --quote-bg: #f4f4f4;
-            --container-width: 750px;
-            
-            /* Fontlar */
-            --font-body: 'Georgia', 'Times New Roman', serif; 
-            --font-heading: 'Segoe UI', 'Helvetica Neue', sans-serif; 
+            --bg: #050505;
+            --card-bg: #111111;
+            --accent: #ffffff; /* İstersen burayı canlı bir renk yapabilirsin */
+            --text-main: #ededed;
+            --text-secondary: #a1a1a1;
+            --border: #222222;
         }
 
-        /* Karanlık Mod */
-        body.dark-mode {
-            --bg-color: #121212;
-            --container-bg: #1e1e1e;
-            --text-color: #e0e0e0;
-            --meta-color: #aaa;
-            --link-color: #78a9ff; 
-            --border-color: #333;
-            --quote-bg: #252525;
-        }
-
-        /* Metin Seçim Rengi */
-        ::selection {
-            background: var(--link-color);
-            color: #fff;
-        }
-
-        /* --- TEMEL YAPILANDIRMA --- */
-        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: var(--font-body);
-            line-height: 1.7;
-            margin: 0;
-            padding: 20px;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: background-color 0.3s ease, color 0.3s ease;
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
         }
 
-        .container {
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 40px;
-            background: var(--container-bg);
-            border: 1px solid var(--border-color);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-radius: 4px;
+        .wrapper {
+            max-width: 600px;
+            width: 100%;
         }
 
-        /* --- BAŞLIK VE MENÜ --- */
+        /* Hero Bölümü */
         header {
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            animation: fadeIn 0.8s ease-out;
         }
 
-        h1 {
-            font-family: var(--font-heading);
-            margin-top: 0;
-            margin-bottom: 5px;
-            letter-spacing: -0.5px;
-            font-size: 2.2rem;
-        }
-
-        .subtitle {
-            color: var(--meta-color);
-            font-style: italic;
-            font-size: 0.95rem;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        /* --- RASTGELE SÖZ KUTUSU --- */
-        .quote-box {
-            background-color: var(--quote-bg);
-            padding: 15px;
-            border-left: 4px solid var(--link-color);
-            margin: 20px 0;
-            border-radius: 0 4px 4px 0;
-            font-size: 0.95rem;
-            position: relative;
-        }
-
-        .quote-text {
-            font-style: italic;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .quote-author {
-            display: block;
-            text-align: right;
-            font-family: var(--font-heading);
-            font-size: 0.85rem;
-            font-weight: bold;
-            color: var(--meta-color);
-        }
-
-        /* --- NAVİGASYON --- */
-        nav {
-            margin-top: 25px;
-            font-family: var(--font-heading);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
+        .badge {
             display: inline-block;
-            margin-right: 20px;
-        }
-
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-            border-bottom: 1px dotted transparent;
-            transition: all 0.2s;
-            font-weight: 500;
-        }
-
-        a:hover {
-            border-bottom-color: var(--link-color);
-            opacity: 0.8;
-        }
-
-        /* --- İÇERİK --- */
-        h2 {
-            font-family: var(--font-heading);
-            color: var(--text-color);
-            margin-top: 1.5em;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 5px;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: var(--border-color);
-            margin: 40px 0;
-        }
-
-        /* Drop Cap (İlk harf büyütme) */
-        #hakkimda p:first-of-type::first-letter {
-            color: var(--link-color);
-            float: left;
-            font-family: var(--font-heading);
-            font-size: 3.5rem;
-            line-height: 0.8;
-            padding-right: 10px;
-            padding-top: 5px;
-            font-weight: bold;
-        }
-
-        /* Proje Kutucukları */
-        .project-item {
-            border: 1px dashed var(--border-color);
-            padding: 15px;
+            padding: 4px 12px;
+            background: #1a1a1a;
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            color: #4ade80; /* "Available for work" yeşili */
             margin-bottom: 15px;
-            border-radius: 4px;
-            transition: transform 0.2s;
-        }
-        
-        .project-item:hover {
-            border-style: solid; /* Hoverda çerçeve düzleşir */
-            background-color: var(--quote-bg);
         }
 
-        /* --- FOOTER & BUTON --- */
-        footer {
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--meta-color);
-            margin-top: 50px;
-            font-family: var(--font-heading);
+        h1 { font-size: 2.5rem; font-weight: 600; letter-spacing: -1px; }
+        .title { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 20px; }
+
+        /* Kart Yapısı */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
         }
 
-        #theme-toggle {
-            float: right;
-            padding: 6px 12px;
-            cursor: pointer;
-            background: transparent;
-            border: 1px solid var(--border-color);
-            color: var(--text-color);
-            font-family: var(--font-heading);
-            font-size: 0.8rem;
-            border-radius: 4px;
-            transition: all 0.2s;
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 24px;
+            border-radius: 20px;
+            transition: 0.3s;
         }
 
-        #theme-toggle:hover {
-            background-color: var(--border-color);
+        .card:hover { border-color: #444; transform: translateY(-2px); }
+
+        .full-width { grid-column: span 2; }
+
+        /* İçerik Stilleri */
+        h3 { font-size: 1rem; margin-bottom: 10px; color: var(--accent); }
+        p { font-size: 0.9rem; color: var(--text-secondary); }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: var(--text-main);
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
         }
 
-        @media (max-width: 600px) {
-            .container { padding: 20px; width: 100%; border: none; }
-            #theme-toggle { float: none; display: block; margin-bottom: 15px; width: 100%; }
-            nav ul li { display: block; margin-bottom: 8px; border-bottom: 1px solid var(--border-color); padding-bottom: 4px;}
+        .link-item:last-child { border-bottom: none; }
+        .link-item span { font-weight: 400; }
+        .link-item i { font-size: 0.8rem; color: var(--text-secondary); }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 480px) {
+            .grid { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <a href="#main-content" style="position:absolute; left:-999px;">Ana içeriğe geç</a>
-
+    <div class="wrapper">
         <header>
-            <div id="js-controls"></div>
-            
-            <h1>Padros</h1>
-            <span class="subtitle">Alaylı Felsefeci | Aristotelesçi | Padrosî</span>
-            
-            <div id="daily-quote-container" class="quote-box">
-                <span id="quote-text" class="quote-text">Söz yükleniyor...</span>
-                <span id="quote-author" class="quote-author"></span>
-            </div>
-
-            <nav aria-label="Ana Menü">
-                <ul>
-                    <li><a href="#hakkimda">/ Hakkımda</a></li>
-                    <li><a href="#projeler">/ Projeler</a></li>
-                    <li><a href="#iletisim">/ İletişim</a></li>
-                </ul>
-            </nav>
+            <div class="badge">● Projelere Açık</div>
+            <h1>Selam, ben Alihan Padros </h1>
+            <p class="title">Alaycı Felsefeci, Linux Pengueni</p>
         </header>
 
-        <main id="main-content">
-            <section id="hakkimda">
-                <h2>Hakkımda</h2>
-                <p>
-                    Merhaba! Ben <strong>Alihan KARAKUŞ</strong>. Twitter ve diğer mecralarda <em>Padros</em> ismini kullanan bir öğrenciyim. 
-                    Birçok farklı alanda çalışmalarım ve projelerim var. Çok geniş bir yelpazede olmasına karşın burada onların bazılarından bahsedeceğiz.
-                </p>
-                <p>
-                    Ana odağım her zaman <strong>felsefe</strong> olsa da teoloji, GNU/Linux ve Manga çevirisi ile ilgileniyorum. 
-                    Şu anda memleketimde —Memleketimin neresi olduğunu söylemek istemiyorum— kötü bir bölüm okumaktayım. 
-                </p>
-            </section>
+        <div class="grid">
+            <!-- Hakkımda Kutusu -->
+            <div class="card full-width">
+                <h3>Kısaca Ben</h3>
+                <p>Öyle takılıyorum birkaç yazım vs var öyle işte </p>
+            </div>
 
-            <section id="projeler">
-                <h2>Projelerim</h2>
-                <div class="project-item">
-                    <strong>Mustakil Dergi</strong>
-                    <p>Arkadaşlarım ve onların arkadaşlarının bir arada kullandığı kolektif blog sayfası.</p>
-                    <a href="https://www.mustakildergi.com" target="_blank">Projeyi İncele &rarr;</a>
-                </div>
-                
-                </div>
-            </section>
+            <!-- Yetenekler / Odak -->
+            <div class="card">
+                <h3>Odak Alanlarım</h3>
+                <p>Felsefe, GNU/Linux, Temel Ağ Protokolleri</p>
+            </div>
 
-            <section id="iletisim">
-                <h2>İletişim</h2>
-                <p>Benimle aşağıdaki frekanslardan iletişime geçebilirsiniz:</p>
-                <ul>
-                    <li>E-posta: <a href="mailto:iletisim.vocation936@passinbox.com">iletisim.vocation936@passinbox.com</a></li>
-                    <li>Substack: <a href="https://padros.substack.com/" target="_blank">padros.substack.com</a></li>
-                    <li>Onion: <a href="http://padrosw7exvoqyqwyj2fgaoyo77vqffv2w5jhpqxkypw7soii4pexqad.onion/">onion link</a></li>
-                    <li>Twitter: <a href="https://x.com/padrosum" target="_blank">@padrosum</a></li>
-                </ul>
-            </section>
-        </main>
+            <!-- Lokasyon / Mood -->
+            <div class="card">
+                <h3>Şu An</h3>
+                <p>Mağaramda oturup homelabbing yapıyoruz</p>
+            </div>
 
-        <footer>
-            <hr>
-            <p>&copy; 2025 Padros. <a href="https://www.gnu.org/philosophy/free-sw.html" target="_blank">Özgür Yazılım</a> ruhuyla.</p>
-            <p><small>[ Bu site Lynx/w3m dostudur ]</small></p>
+            <!-- Linkler Bölümü -->
+            <div class="card full-width">
+                <h3>Bağlantılar</h3>
+
+                <a href="https://github.com/Padrosum" class="link-item"><span>GitHub</span> ↗</a>
+                <a href="https://x.com/padrosum" class="link-item"><span>Twitter</span> ↗</a>
+                <a href="https://www.youtube.com/@padrosum" class="link-item"><span>YouTube</span> ↗</a>
+            </div>
+        </div>
+
+        <footer style="margin-top: 50px; text-align: center; color: var(--text-secondary); font-size: 0.8rem;">
+            2026 • Sadeliğin gücüne inanarak tasarlandı.
         </footer>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            
-            // --- 1. RASTGELE SÖZ SİSTEMİ ---
-            // Buraya istediğin kadar söz ekleyebilirsin. Format: { text: "Söz", author: "Yazar" }
-            const quotes = [
-                { text: "Kimse rastgele kötü olmaz.", author: "Aristoteles" },
-                { text: "Mutluluk, kendinle uyum içinde olmaktır.", author: "Aristoteles" },
-                { text: "Komedi, vasattan daha kötü karakterleri, trajedi ise vasattan daha iyi karakterleri temsil etmek ister..", author: "Aristoteles" },
-                { text: "Erdem, tercih edilen bir huy, karakter yapısıdır.", author: "Aristoteles" },
-                { text: "Atinalılar, Sokrates’i, bir bilgeyi öldürmekle, kentinizi ayıplayacak olanlar nedeniyle kazanacağınız kötü ünün dışında, büyük bir kazancınız olmayacak; ben gerçekte hiçbir şey bilmeyen bir adam olduğum halde onlar sizi kötülemek istedikleri zaman, benim bilge olduğumu söyleyecekler.", author: "Sokrates veya Platon" },
-                { text: "Düşünüyorum, öyleyse varım.", author: "Descartes" },
-                { text: "Mağaranın duvarındaki gölgeleri gerçek sanan insan, ışığı görünce önce kör olur..", author: "Platon" },
-                { text: "Nitekim öyle de olmuştur. İster Varlık, ister Tanrı istersen de Töz de yüceler yücesinin namı eksilmez, artmaz. O mutlak anlamda kâmil olandır, hareketsiz hareket ettiricidir. Mümkünlerin hareketi kendi özlerinden kurtulup o olmaktır. O olmak ise kâmil olmaktır..", author: "Padros" } 
-            ];
-
-            function getRandomQuote() {
-                const randomIndex = Math.floor(Math.random() * quotes.length);
-                const quoteText = document.getElementById('quote-text');
-                const quoteAuthor = document.getElementById('quote-author');
-                
-                // Efektli geçiş için önce opaklığı sıfırla (isteğe bağlı)
-                quoteText.innerText = `"${quotes[randomIndex].text}"`;
-                quoteAuthor.innerText = `- ${quotes[randomIndex].author}`;
-            }
-            
-            // Sayfa yüklenince sözü getir
-            getRandomQuote();
-
-
-            // --- 2. KARANLIK MOD SİSTEMİ ---
-            const headerDiv = document.getElementById('js-controls');
-            const toggleBtn = document.createElement('button');
-            const body = document.body;
-
-            toggleBtn.id = 'theme-toggle';
-            toggleBtn.setAttribute('aria-label', 'Karanlık moda geç');
-            headerDiv.appendChild(toggleBtn);
-
-            const currentTheme = localStorage.getItem('theme');
-            if (currentTheme === 'dark') {
-                body.classList.add('dark-mode');
-                toggleBtn.innerText = "☀ Aydınlık Mod";
-            } else {
-                toggleBtn.innerText = "☾ Karanlık Mod";
-            }
-
-            toggleBtn.addEventListener('click', function() {
-                body.classList.toggle('dark-mode');
-                if (body.classList.contains('dark-mode')) {
-                    toggleBtn.innerText = "☀ Aydınlık Mod";
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    toggleBtn.innerText = "☾ Karanlık Mod";
-                    localStorage.setItem('theme', 'light');
-                }
-            });
-
-            console.log("Made by Gemini.");
-        });
-    </script>
 
 </body>
 </html>
