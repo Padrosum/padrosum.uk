@@ -20,7 +20,7 @@
 ## Blog
 ---
 
-### 4 Mayıs 2026 - VPN, Sosyal Media ve İşletim Sistemine Getirilecek Yaş Doğrulama ve Tanımlanabilir Veri İstencinin Siyonist/Yahudi Kökeni
+### 4 Mayıs 2026 - VPN, Sosyal Media ve İşletim Sistemine Getirilecek Yaş Doğrulama ve Tanımlanabilir Veri İstencinin Siyonist Kökeni
 
   Bir çok insan gerek toplu ağlara bağlanırken, gerek hız için gerekse de gizlilik ve yasak delmek için VPN servislerini kullanır. Bu kişiler
   kendi cihazlarından bir sunucuya istek atma hakkını kullanırlar, kendi parasını verdiği makinenin ve yine parasını verdiği internet'i kullanmak isterler
