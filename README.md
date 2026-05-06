@@ -42,7 +42,7 @@ Felsefi Duruş: Aristotelesçi Panteizm
  Şükür de böyledir, kalbin sıcaklığıdır, elbette.  
  
 
- O gece ki Ay  ve esen rüzgarı barındırır,  
+ O gece ki Ay ve esen rüzgarı barındırır,  
  Ay ve o esinti rahatlık verir ruha,  
  Şükür de böyledir elbet rahatlık verir ruha.  
 
@@ -69,7 +69,7 @@ Felsefi Duruş: Aristotelesçi Panteizm
 
 
  Padros, şükür etmeye tutulmuş, ona sevdalı olmuş  
- Bazılarının ünlü filozofa atıf ile bu duruma bir ad vermiş,  
+ Bazılarının ünlü filozofa[^1] atıf ile bu duruma bir ad vermiş,  
  Şükür etmek, Onun ismiyle anlamlı oldu der Padros, şükür etmeye utanır halde,  
  Ona ulaşınca geçer belki acılarım, var olur amacım der Padros.  
  Ama bilir elbet yanılsamadır, bu.  
@@ -81,9 +81,9 @@ Felsefi Duruş: Aristotelesçi Panteizm
  O dağ ki bir çok canlıya yuva,  
  O dağ ki kimilerine gölge, kimilerine şiir olmuş,  
  Bu yazıda da anılır olmuş,  
- Şükranlar sunusu eksik olmamış.  
+ Şükran sunusu eksik olmamış.  
 
-
+[^1]: Platon
 
 ### 4 Mayıs 2026 - VPN, Sosyal Media ve İşletim Sistemine Getirilecek Yaş Doğrulama ve Tanımlanabilir Veri İstencinin Siyonist Kökeni
 
