@@ -7,7 +7,6 @@ OS: Arch Linux
 Felsefi Duruş: Aristotelesçi Panteizm
 ```
 
-
   Ben Alihan Padros Karakuş, 21 yaşında felsefe, ilahiyat, CS ve mitoloji ile ilgilenen bir Türk genciyim.
   Çoğunlukla Twitter'da siyaset, felsefe ve ilahiyat alanındaki tartışmalarım ile bilinirim/bilinirdim.
   2024 yılının başlarında tartışma kültüründen vazgeçip biraz arınma sürecine girdim, aslında depresyon desek daha iyi olur.
