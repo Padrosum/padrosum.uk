@@ -1,5 +1,12 @@
 ## Mukkadim
 ---
+```yaml
+İsim: Alihan Padros Karakuş
+Öğrenim Durumu: Üniversite Öğrencisi
+OS: Arch Linux
+Felsefi Duruş: Aristotelesçi Panteizm
+```
+
 
   Ben Alihan Padros Karakuş, 21 yaşında felsefe, ilahiyat, CS ve mitoloji ile ilgilenen bir Türk genciyim.
   Çoğunlukla Twitter'da siyaset, felsefe ve ilahiyat alanındaki tartışmalarım ile bilinirim/bilinirdim.
