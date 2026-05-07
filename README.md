@@ -26,7 +26,25 @@ Felsefi Duruş: Aristotelesçi Panteizm
 ## Blog
 ---
 
+### 7 Mayıs 2026 - Yaşam Üzerine Düşünceler
 
+Yaşam çok garip bir kavram aslında, gündelik hayatımızda en çok ilişiğimiz olan kavramların en üstünde yer almıştır, yaşam. Yaşam kelime anlamıyla yaş alan, yaş alınan ya da yaşlanan, yıllanan veya zamanda mevcut olup devam eden şeklinde açıklanabilir. Biyolojik anlamda yaşam ise biyolojik bireyin vucud bütünlülüğüyle devamlılığı sağlama olarak da anlaşılabilir. Dahası yaşam bir çok edebiyatçı için ya iyi ve ferahlık veren ya da kötülük ya da acı veren olarak da anlaşılabilmektedir.
+
+Dahası yaşam, yaş ile alakalı olarak bir değişimi de bağrında barındırmaktadır. Yaşayan birey, yaşamının ilk dönemlerinde emeklerken ileride yıldızlara ulaşmayı hayal edebilir ve buna yönelik adımlar bile atabilmektedir. Bu yaşamın -insanlar için vucud gelişimiyle birlikte zihinsel gelişim de önemlidir, biyolojik olarak bir tekamülü de barındırdığını da düşünebiliriz. Biz, İnsanlar, şeyleri sadece bizim açımızdan değil ancak şeylerin kendisi olması açısıyla da kavrayabilme yeteneği ile kutsanmışız, bu kutsallığımız bize yaşam ile alakalı sadece biyolojik değil ancak ruhsal bir alanı da açmaktadır. Yani insanlar sadece ekmek değil başka şeylere de arzu duyabilir. Bu ondaki bu yeteneğin bir ileneği olan bilgiye açlık ya da merak özeliği ile alakalıdır. 
+
+Yaşam kavramı canlı varlıklar açısından onların bütünsel olarak devamlılığına ve gelişmesine yöneliktir, ancak bilinmelidir ki az önceki çıkarımlarımızdan dolayı insanlar için bir parantez açıp onda ruhsal olarak da bir bütünlük ya da amaca sahiplik olması anlamı vurgulanmalıdır. Her kavramda olduğu gibi bu kavram da gerçeklikte karşımıza eksik veya yetersiz ya da daha tam veya mükemel formlarda karşımıza çıkmaktadır, bu atfiyet ise gerçeklikteki nesnelerin kavrama ne kadar uygun düştüğü ile alakalı bir durumdur. Kalem kavramına elimdeki kalem ne kadar iyi uyuyorsa o kadar iyidir. Nitekim yaşam kendi başına gerçeklikte yoktur, bir başka şeyin bir niteliği olarak karşımıza çıkmaktadır, nitekim bu iyi ve kötü kavramları için veya güzel - çirkin kavramları için de geçerli bir durumdur. Yaşam canlı varlıkte kendini gösteren ve onların biyolojik yapısına, akli durumuna göre tam, eksik, daha eksik, daha tam vs ile adlandırılabilir olacaktır. Biz bunları iyi yaşam veya kötü yaşam olarak da adlandırabiliriz.
+
+Bu bakımdan bir canlının yaşamının iyi olması anlamında o eğer kendi biyolojik yapısının ve akli durumunun getirilerine uyarsa yani kendi kavramsal tanımına uygun bir yaşama sahipse yaşamı da o kadar iyidir. Ancak insanlarda yine bir paranteze ihtiyaç duyuyoruz. İnsanlar diğer hayvanlardan farklı olarak şeyleri oldukları gibi kavrayabilme yeteneğine sahiptir.[^3]Bu yetenek onda bir düşünsel süreç yaratmakta onda bir fikir ya da fikirler grubu oluşturma yeteneği de kazandırmaktadır, çünkü bilgilerinin doğruluk değeri kesin olarak doğru olacak diye bir kaide yoktur. Bu ihtimalli durum, bizdeki fikir ayrılığının temelidir. Bizler bir birimizden farklı düşünebilme yeteneğine sahip kişileriz.
+
+Nitekim bu fikir farklılıkları bizim iyi yaşam anlamında da hayvanlardan ayırmaktadır, bir kedi ile insan arasında her ne kadar iyi yaşam tanımı aynı olsa da içerik farklıdır. İnsanların hepsinde ortak olan kısım onun tanımı olan düşünen hayvanlığına yöneliktir, düşünen kısmında insan akılsal erdemlere hayvan kısmında ise hayvani özelliklere sahiptir, bunlar aklın gölgesinde iken birer erdem iken[^2] aksi durumda birer aşırılık olarak karşımıza çıkmakta o canlıyı eudiamonia'dan uzaklaştırmaktadır. Ancak her bireyden bireye değişen benlik kavramı da vardır. Bu bireyleri birbirinden ayıran özelliklerin tümüdür, onun memleketi, sevdiği - sevmediği şeyler, ismi vs bunların tamamı bir benlik oluşturmaktadır ve bu benlik de iyi yaşamlık içeriğine bir parça olarak katılmaktadır.
+
+Peki ya bu benliğin keşfi zorlu ise,
+Peki ya birey bu benliğin amacını kaybetmiş ise,
+Ruhu acı içinde olmaz mı,
+Gözleri kan ağlamaz mı?
+
+[^3]: Bu ister bir anda olsun isterse de öncüllerden ulaşılmış olsun
+[^2]: Bknz. Altın Orta
 
 
 ### 6 Mayıs 2026 - Şiir'in Tekrarı
