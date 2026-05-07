@@ -34,9 +34,9 @@ Felsefi Duruş: Aristotelesçi Panteizm
 
 Cehennem efendileri; Cehenemi yöneten çoğunlukla cennetten düşmüş melek veya antik pagan tanrılarından oluşan demonik bir gruptur. 
 
-## Mammon
+#### Mammon
 ---
-![[The_worship_of_Mammon.jpg]]
+
 
 Aramicedeki para, mülk ve zenginlik anlamındaki Mammoa kelimesinden gelen bu iblis; insandaki para ve mülk hırsının kişileşmiş bir halidir. İnsanları para, refah ve zenginlik vaatleri ile ayartan bir cehennem efendisidir.
 
@@ -47,7 +47,7 @@ Aramicedeki para, mülk ve zenginlik anlamındaki Mammoa kelimesinden gelen bu i
 - Paradise Lost şiirinde Cennet'ten düşmeden önce de Tanrı'yı değil parayı, refahı ve zenginliği yüceltiği yazmaktadır.
 + Günümüzde kısa yoldan zengin olmak, refah düşkünlüğü gibi pratik eylemler ile eşleştirilmektedir.
 
-## Belphegor
+#### Belphegor
 ---
 Eski Ahitteki Baal'ın Baal Peor ile anılan bir eski bir pagan tanrısıdır. Ardından Belphegor ismiyle bir cehennem efendisi olarak anılmaya başlanmıştır.
 
@@ -61,16 +61,16 @@ Bu pagan tanrı Eski Ahitte anlatıldığı gibi İsrail'ileri kendisine inanan 
 
 Daha sonraları ise bu pagan tanrısının epiteti bir iblis olarak yahudi ve hristiyanlıkta anılır olmuştur. İblis olarak anılan Belphegor, insandaki tembellik duygusunun bir kişileştirilmesidir. Cehennemde hüküm süren bir efendidir.
 
-![[images 1.jpg]] 
+
 (Dicinary İnferno)
 
 Bu iblis insanları güzel bir kadın kılığında kandırıp onları rahatlığa ve tembelliğe yönlendirmektedir. Bazen de ona teknoloji vs sunmakta ya da onların ruhlarını herşeyin anlamsız olduğuna yönelik melekonik duygular aşılamaktadır. 
 
 - Günümüzde ise teknolojinin getirdiği rahatlık ve tembelliğe bağımlılık halinin bir tezahuru olarak görülmektedir.
 
-![[unnamed.jpg]]
 
-# Baal
+
+#### Baal
 ---
 
 Baal, efendi anlamına gelen bir kelimedir. Kenan diyarında bir çok tanrı için kullanılmak ile birlikte Kenanlılar ve Phoenicia'lılar için Baal en büyük tanrılardan biri, El'in oğlu ve Bereket tanrısı idi. Kenanik anlatılarda El'i yenmiş, güneş ve tahtla da ilişkili bir şekilde karşımıza çıkmaktadır. **Bereket, refah, çocuk doğurganlığı ile de anılırdı. Arkeologlar onu boğa olarak doğurganlık ile ilişkili tasvirlerini bulmuşlardır. [](https://www.christianity.com/wiki/bible/who-is-baal-in-the-bible.html)
@@ -80,16 +80,15 @@ Baal Peor ismi ile yapılınan tapınmalar yukarıda bahsedildi, şimdi de genel
 Baal'in dikatini çekmek üzere rahipler kendilerini bıçak ya da kılıç ile keser kanlarını akıtır ve dans edip bağırırlardı. - _1. Kings 18:28._ Cinsel ilişkiler kurulurdu. Tapınaklarında ise takipçiler kendi çocuklarını yakar ve Baal'a kurban olarak verirlerdi. Yüceler Yücesi Tanrımız Rabbimiz Allah ise der ki ben asla bunu emretmedim, söylemedim ya da aklıma dahi getirmedim. - _Jeremiah 19:5_ [](https://waltroderick.com/the-cult-of-baal/)
 
 
-![[1_Oof5XuLgmkwbxj006Zv2Ow.jpg]]
+
 
 Antik dönemde bir tanrı iken bile demonik bir tapınma ayinine sahip olan Baal, erken hristiyanlık ve orta çağ'da bir iblis olarak karşımıza çıkması şaşırtıcı değildir. Dahası kendisi Kur'an'da da bahsedilmiştir; Kur'an'da İlyasa'nın anıldığı pasajda yani 37:123-125'de İlyasa, halkına en güzel yaratıcıyı bırakıp Baal'a nasıl tapınırsınız demektedir. Mukatil bin Süleyman'ın aktarmasına göre Ba'le Bekke adlı bir bölgede bir tanrı olan Baal, İlyasa tarafından kırılmış ve İlyasa oradan kaçmıştır. Elmalılı Hamdi hocanın tefsirinde ise dört başlı bir şekilde tasvir edildiği aktarılmaktadır. 
 
-## Beelzebub
+#### Beelzebub
 ---
 
 Eskiden pagan tanrısı iken göklerin tanrısı anlamındaki bir epitete sahip olan bir Baal formudur, ancak daha sonraları sineklerin tanrısı epitetini almıştır. **Beelzebub; oburluk, kontrolsüz iştah, toplumları yozlaşmasının bir kişileştirmesidir. 
 
-![[beelzebub-19th-century-nbeelzebub-the-biblical-demon-prince-lord-of-FF7EYB.jpg]]
 
 - Salgın hastalıkları ve materyal çürümeyi topluma getirmektedir, dictinary inferno'da ise tüm pisliğin kaynağı olarak adlandırılmaktadır.
 - Kara ayinlerde ilahi olan kirletilirken adı bir çok kez anılan bir figürdür.
@@ -97,35 +96,35 @@ Eskiden pagan tanrısı iken göklerin tanrısı anlamındaki bir epitete sahip 
 
 İsa'nın iblisleri kovması üzerine yahudilerin ona attığı iftirayı içeren pasajdan anlaşıldığı kadarıyla Beelzebub, cehenem efendilerinden biridir. 
 
-## Asmodeus
+#### Asmodeus
 ---
 İsminin kökeni öfke iblisi anlamındadır. Tobit'in kitabında Asmodeus, bir kadına aşık olup onun ile evlenen erkekleri ilk günde öldüren bir iblis olarak karşımıza çıkıyor. Bu da onun bu anlatısı aile kurumunu ve sevgiyi yıkıp onu şehvete yöneltmesi ile de ilgilidir. **Kontrolsüz şehvetin ve aile kurumlarının yıkılmasının kişileştirilmesidir.
 
-![[Asmodeus.jpg]]
 
 Sarah isimli kadının kocalarını öldürmesi ve Sarah'ın ettiği dualar sonucunda Raphael tarafından Asmodeus zincirlenmiştir. Bu da Rapheal'in evlilik kurumunu korumasına yönelik bir anlatıdır. Tüm bunlar Tobit kitabında yer almaktadır.
 
 Günümüz dünyasında da sosyal mediaya her şeyin cinselleştirilmesi, aile kurumlarının yıkılmasına yönelik paylaşımlar, lgbt ve feminizmin yayılması ile ilişkilendirilebilir. []([www.britannica.com/topic/Asmodeus](https://www.britannica.com/topic/Asmodeus))
 
-## Astaroth
+#### Astaroth
 ---
 
 Kökeni aşk, savaş ve doğurganlık bir pagan tanrıçası olan Astaroth, ibrahimi dinlerin egemenliğinden sonra entellektüel bilgeliğe, geçmişin bilgisine sahip bir iblis olarak tasvir edilen cehennem efendisidir. 
 
 Bu geçmişin ve geleceğin bilgilerine sahip olduğuna dair inançtan dolayı falcılık ile eşleştirilmiştir.
 
-## Satan
+#### Satan
 ---
 
 Bazen tüm iblisler ve cehenem efendileri için kullanılan Satan bazen de özellikle Lucifer için kullanılmıştır. Satan, kelime anlamı olarak ayartıcı, hasım ve düşman anlamlarına gelmekte olup kur'anda şeytan olarak anılmaktadır. Bakara'nın 36. ayetindeki anlatıya göre Adem ve Havva'yı ayartıp onlara yasak olanı yaptıran figür şeytandı. Ancak Kur'an cenetten kovulan figür için iblis kelimesini kullanırken asla şeytan kelimesi kullanılmaması dikkat edilmesi gereken bir hussustur. Zira yukarıdaki Satan kullanımına bir yenisi daha eklenip satan'ın Adem ile Havva'yı aratan bir figür olduğunu ancak cennetten kovulan figür olmadığı anlamında bir yorum doğurabilmektedir. Kısaca satan'ın ne iblisler için genel bir kullanım olduğu ne de Lucifer için kullanılmadığı anlaşılabilmektedir. Bu durumda Genesis B'ye dikkat çekerek orada Lucifer'ın Adem ve Havva'yı yoldan çıkarmak ile görevlendirdiği figürün Satan olduğu söylenebilmektedir. Ancak bilinmelidir ki bu iki metin aynı kökten beslense de farklı bir tasavvura sahiplerdi. Bu yüzden anarko kronik bir bakış ile genesis b üzerinde bir yorumlama çabası gereksizdir. Biz kuran çerçevesinde Lucifer(iblis), Satan'ın farklı oldukları açıktır. Nitekim ilerde de göreceğimiz gibi Lucifer mutlak kibrin kişileştirilmesi olarak anıldığı gibi Kur'an da iblis'i bakara 34'te büyüklük taslatan biri olarak anlatmaktadır.
 
-## Lucifer
+#### Lucifer
 ---
 Lucifer, kelime anlamıyla ışık getiren anlamındadır. Lucifer, Yeşaya'da Seher yıldızı lakabından çevrilen bir isimdir, latinize halidir de diyebiliriz. Kibrin kişileşmiş halidir. Cennette Tanrı'ya isyan edip kendisini ona denk görmüştür. Bu yüzden Micheal tarafından yenilmiş ve Cenetten atılmıştır. 
 
-![[Alexandre_Cabanel_-_Fallen_Angel.jpg]]
 
 Kur'ana göre cennette Tanrı'nın yeni yarattığı insandan kendisini üstün gördüğü için cenetten kovulmuştur. 
+
+***
 
 ### 7 Mayıs 2026 - Yaşam Üzerine Düşünceler
 
@@ -147,6 +146,7 @@ Gözleri kan ağlamaz mı?
 [^3]: Bu ister bir anda olsun isterse de öncüllerden ulaşılmış olsun
 [^2]: Bknz. Altın Orta
 
+***
 
 ### 6 Mayıs 2026 - Şiir'in Tekrarı
 
@@ -203,6 +203,8 @@ Gözleri kan ağlamaz mı?
  Şükran sunusu eksik olmamış.  
 
 [^1]: Platon
+
+***
 
 ### 4 Mayıs 2026 - VPN, Sosyal Media ve İşletim Sistemine Getirilecek Yaş Doğrulama ve Tanımlanabilir Veri İstencinin Siyonist Kökeni
 
