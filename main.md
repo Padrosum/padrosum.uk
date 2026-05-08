@@ -26,6 +26,12 @@ Felsefi Duruş: Aristotelesçi Panteizm
 ## Blog
 ---
 
+### 
+
+
+
+
+
 ### 7 Mayıs 2026 - Cehennem Efendileri
 
 [Genel kaynak](https://www.youtube.com/watch?v=vMBHkiyz6Fw) 
