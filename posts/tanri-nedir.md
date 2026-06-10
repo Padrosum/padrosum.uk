@@ -1,3 +1,8 @@
+---
+title: "Tanrı Nedir?"
+date: 2025-12-02T22:07:00+03:00
+---
+
 # Tanrı Nedir?
 
 İnsanoğlu uzun yıllar tapındığı, ondan isteklerde bulunduğu Tanrı veya tanrıların üzerine çok defa ancak yalın düşündüğü ortadadır. Tanrıların eylem, görev ve özelliklerinin neler olduğu yani kısaca mahiyetinin yani ne-olduğu üzerine belki de medeniyet tarihi kadar eski tartışmalar olmuştur. Bu yazımızda Tanrı kavramının özet bir tarihçesine ve bu yazının yazarına sorulan Tanrı anlayışının ne olduğuna cevap verilecektir. 

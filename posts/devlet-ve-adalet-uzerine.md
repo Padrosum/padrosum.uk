@@ -1,3 +1,8 @@
+---
+title: "Devlet ve Adalet Üzerine"
+date: 2025-12-02T22:11:00+03:00
+---
+
 # Devlet ve Adalet Üzerine
 Devletleri biz iki şekilde tasnif edebiliriz, ilki adil devletler ikinicisi ise tiranlıklardır. Bu bağlamda adil olmayan devletleri tiranlık ve adil olan devletleri ise halkına karşı sorumluluk bilincine sahip olan yani çıkardığı yasalar ile halkına belli başlı şeyler kazandırmayı amaçlayan olarak anlamlandırabiliriz dahası halka kazandırılmak istenen şeyin ne olduğunu ve yasaların ise bu ilke (gayesel ilke) bağlamında çıkarılması gerektiği veya ölçüt olarak onun tercih edilmesi gerektiği sonucu karşımıza çıkmaktadır. Bu ilgili ilkenin keşfi bize devletler tasnifimizi de net bir şekilde sunacaktır. Nitekim bu ilkenin aksi tiranlık ilke ile uyumluluk ise adalettir.
 

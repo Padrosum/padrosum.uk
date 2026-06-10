@@ -1,3 +1,8 @@
+---
+title: "İnsan Eylemlerinin Nihayi Amacı veya Ahlak Üzerine"
+date: 2025-12-02T22:10:00+03:00
+---
+
 # İnsan Eylemlerinin Nihayi Amacı veya Ahlak Üzerine
 
 Her eylem gayesel ilke uğruna yapılmaktadır. Bu gayesel ilke ise iki çeşittir; ana Gaye ve ana gaye uğruna istenilen araçsal gaye -_bu ikili yapı mevcut olanın taksimi için elzem olup yazımızın devamında da bu lafzlar kullanılacaktır_. Bu bağlam içinde eylemlerimiz bu ana gayeye yaklaştığı veya ana gaye uğruna istenilen araçsal gayeye ulaştığı ölçüde iyidir. İyilik kavramı bu bağlamda bizi ana gayemize yaklaştıran şeylerin bütününe verilen bir addır. Bunları her ne kadar insanî merkeze oturtarak aktardıysak da tüm eşyaların/şeylerin kendi doğalarından gelen ana gayelerinin varlığı ve ona uygun olanlara iyi denilmesi de buna dahildir. 

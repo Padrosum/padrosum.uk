@@ -1,3 +1,8 @@
+---
+title: "Yaratılış Kitabı ve İki Yaratılış"
+date: 2025-12-02T22:13:00+03:00
+---
+
 # Yaratılış Kitabı ve İki Yaratılış
 
 Yahudiler ve Hristiyanlarca -kanon kitapları farklı olsa da, ortak kabul edilen eski ahit yani Tanah'ın ilk beş kitabı veya töre kitapları(Tora) olarak adlandırılan ve Musa'ya izafe edilen kitapların ilki olan Tekvin, genel anlamıyla yahudi ulusunun bir önsel hikayesidir. Onların Mısır'a nasıl geldiklerini, niçin orada olduklarını, kökenlerini, misyonlarını anlatan bu kitap bunu yapabilmek için öncellikle İnsanlığın ve İnsanlık için de dünyanın yaratılışını konu edinmektedir. Tekvin kitabının başında dünyanın yaratılışı ve insanın yaratılışı anlatıldıktan sonra tufan öyküsü, İbrahim ve onun soyunun öyküsü ve misyonu anlatılmaktadır. Bazı araştırmacılar bu kitabın birden fazla yazar veya teolojik görüş çerçevesinde yıllar içinde yazılıp, toplandığını aktarmıştır. Bu araştırmacılar hem kitabı kendi içinde kritik edip pasajları kendi gayesine göre tasnif ediyor yani sıfırlandırıyor ve aynı gayelere sahip pasajlara tek bir yazar veya yazarlar topluluğu adı izafe ediyorlar.(Dan McClellan ve New Oxford Annonted Bible - Genesis Introduction)
