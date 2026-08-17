@@ -21,6 +21,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Checkout PPOD
+        uses: actions/checkout@v4
+        with:
+          repository: Padrosum/ppod
+          ref: main
+          path: .ppod
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -32,6 +38,13 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Build PPOD
+        working-directory: .ppod
+        run: |
+          npm ci
+          npm run build
+      - name: Add PPOD to Pages artifact
+        run: mkdir -p out/ppod && cp -R .ppod/dist/ppod/. out/ppod/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

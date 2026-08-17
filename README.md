@@ -48,3 +48,7 @@ npm install
 npm run dev     # http://localhost:3000
 npm run build   # statik çıktı: out/
 ```
+
+## PPOD
+
+The Pages workflow also checks out `Padrosum/ppod`, builds it, and adds its static output under `out/ppod/`. The personal site stays at the root while the podcast is served at `https://padrosum.uk/ppod/`.
