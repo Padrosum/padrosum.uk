@@ -30,20 +30,18 @@ jobs:
           cache: npm
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Install dependencies
-        run: npm ci
-      - name: Build
-        run: npm run build
       - name: Build PPOD
         working-directory: .ppod
         run: |
           npm ci
           npm run build
-      - name: Add PPOD to Pages artifact
-        run: |
-          mkdir -p out/ppod
-          cp -R .ppod/dist/ppod/. out/ppod/
-          rm -rf .ppod/.git
+          rm -rf .git
+      - name: Add PPOD to Next public assets
+        run: mkdir -p public/ppod && cp -R .ppod/dist/ppod/. public/ppod/
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
