@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -21,12 +21,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Checkout PPOD
-        uses: actions/checkout@v4
-        with:
-          repository: Padrosum/ppod
-          ref: main
-          path: .ppod
+      - name: Fetch PPOD
+        run: git clone --depth 1 --branch main https://github.com/Padrosum/ppod.git .ppod
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -44,7 +40,10 @@ jobs:
           npm ci
           npm run build
       - name: Add PPOD to Pages artifact
-        run: mkdir -p out/ppod && cp -R .ppod/dist/ppod/. out/ppod/
+        run: |
+          mkdir -p out/ppod
+          cp -R .ppod/dist/ppod/. out/ppod/
+          rm -rf .ppod/.git
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
