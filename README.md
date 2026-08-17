@@ -52,3 +52,5 @@ npm run build   # statik çıktı: out/
 ## PPOD
 
 The Pages workflow also checks out `Padrosum/ppod`, builds it, and adds its static output under `out/ppod/`. The personal site stays at the root while the podcast is served at `https://padrosum.uk/ppod/`.
+
+To rebuild this site automatically after a PPOD push, add a fine-grained token with repository dispatch permission as `PERSONAL_SITE_DISPATCH_TOKEN` in `Padrosum/ppod` repository secrets. The PPOD workflow then sends the `ppod-updated` event consumed here.
