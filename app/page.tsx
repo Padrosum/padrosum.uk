@@ -13,33 +13,18 @@ export default function Home() {
 
   return (
     <>
-      {/* ── Header ── */}
-      <header className="relative border-b border-border pt-20 pb-12 after:absolute after:-bottom-px after:left-0 after:h-[2px] after:w-20 after:bg-gold">
-        <h1 className="font-display text-[clamp(2rem,5vw,3.2rem)] leading-[1.1] font-bold tracking-[0.04em] text-cream">
-          Alihan <span className="text-gold">Padros</span> Karakuş
+      {/* ── Hero ── */}
+      <header className="pt-16 pb-12 border-b">
+        <h1 className="font-bold leading-[1.05] tracking-tight text-4xl text-text sm:text-5xl">
+          Alihan Padros Karakuş
         </h1>
-        <p className="mt-2 font-mono text-[0.72rem] tracking-[0.15em] uppercase text-gold-dim">
+        <p className="mt-3 font-mono text-[0.75rem] tracking-[0.18em] uppercase text-muted">
           Felsefe · İlahiyat · CS · Mitoloji
         </p>
       </header>
 
-      {/* ── YAML kartı ── */}
-      <div
-        role="complementary"
-        aria-label="Profil bilgisi"
-        className="my-10 border border-border border-l-[3px] border-l-gold bg-bg3 px-7 py-6 font-mono text-[0.78rem] leading-[1.9] text-text-dim"
-      >
-        {profile.map(([key, val]) => (
-          <div key={key}>
-            <span className="text-gold">{key}</span>
-            <span className="text-muted">: </span>
-            <span className="text-cream">{val}</span>
-          </div>
-        ))}
-      </div>
-
       {/* ── Bio ── */}
-      <div className="prose mb-8 text-[1.05rem]">
+      <div className="prose mt-10">
         <p>
           Ben Alihan Padros Karakuş, 21 yaşında felsefe, ilahiyat, CS ve mitoloji ile ilgilenen
           bir Türk genciyim. Çoğunlukla Twitter&apos;da siyaset, felsefe ve ilahiyat alanındaki
@@ -62,53 +47,88 @@ export default function Home() {
         </p>
         <p>
           İletişim:{" "}
-          <span className="inline-block border border-gold-dim bg-surface px-3 py-0.5 font-mono text-[0.78rem] tracking-[0.04em] text-gold no-underline">
+          <a href="mailto:padrosum@disroot.org" className="font-mono text-[0.95rem]">
             padrosum@disroot.org
-          </span>{" "}
+          </a>{" "}
           — bu adres üzerinden XMPP protokolünde de bir hesabım mevcuttur.
         </p>
       </div>
 
-      {/* ── Blog ── */}
-      <div className="mt-20 mb-10 flex items-center gap-4 font-display text-[0.7rem] tracking-[0.3em] uppercase text-gold after:h-px after:flex-1 after:bg-border">
-        Blog
-      </div>
+      {/* ── Profil kartı ── */}
+      <dl className="mt-10 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 rounded-xl border bg-surface px-6 py-5 font-mono text-[0.85rem]">
+        {profile.map(([key, val]) => (
+          <div key={key} className="contents">
+            <dt className="text-muted">{key}</dt>
+            <dd className="text-text">{val}</dd>
+          </div>
+        ))}
+      </dl>
 
-      <div>
-        {posts.map((post, i) => (
+      {/* ── Blog ── */}
+      <h2 className="mt-20 mb-6 font-mono text-[0.75rem] tracking-[0.2em] text-muted uppercase">
+        Yazılar
+      </h2>
+
+      {posts[0] && (
+        <Link
+          href={`/posts/${posts[0].slug}/`}
+          className="fade-up group block rounded-2xl border bg-surface p-6 transition-colors hover:border-accent sm:p-8"
+        >
+          <div className="mb-3 flex flex-wrap items-center gap-x-3 font-mono text-[0.72rem] text-faint">
+            <span>{formatDate(posts[0].date)}</span>
+            <span aria-hidden>·</span>
+            <span>{posts[0].readingMinutes} dk okuma</span>
+            {posts[0].type && (
+              <>
+                <span aria-hidden>·</span>
+                <span>{posts[0].type}</span>
+              </>
+            )}
+          </div>
+          <h3 className="text-2xl font-bold tracking-tight text-text transition-colors group-hover:text-accent sm:text-[1.7rem]">
+            {posts[0].title}
+          </h3>
+          <p className="mt-3 text-[0.98rem] leading-relaxed text-muted">
+            {excerpt(posts[0])}
+          </p>
+          <span className="mt-5 inline-block font-mono text-[0.7rem] tracking-[0.15em] uppercase text-accent">
+            Devamını oku →
+          </span>
+        </Link>
+      )}
+
+      <div className="mt-2">
+        {posts.slice(1).map((post, i) => (
           <article
             key={post.slug}
-            className="fade-up group border-b border-border py-9 last:border-b-0"
-            style={{ animationDelay: `${0.05 + i * 0.07}s` }}
+            className="fade-up group border-b py-6 last:border-b-0"
+            style={{ animationDelay: `${0.03 + i * 0.05}s` }}
           >
             <Link href={`/posts/${post.slug}/`} className="block">
-              <div className="mb-3 flex flex-wrap items-baseline gap-x-4 font-mono text-[0.68rem] tracking-[0.12em] uppercase text-gold-dim">
-                <span>{formatDate(post.date)}</span>
-                <span className="text-muted">{post.readingMinutes} dk okuma</span>
-                {post.type && <span className="text-accent">{post.type}</span>}
+              <div className="flex items-baseline justify-between gap-4">
+                <h3 className="text-xl font-semibold tracking-tight text-text transition-colors group-hover:text-accent">
+                  {post.title}
+                </h3>
+                <time className="shrink-0 font-mono text-[0.72rem] text-faint">
+                  {formatDate(post.date)}
+                </time>
               </div>
-              <h2 className="font-display text-[clamp(1.15rem,2.5vw,1.5rem)] leading-[1.25] font-semibold text-cream transition-colors group-hover:text-gold">
-                {post.title}
-              </h2>
-              <p className="mt-3 text-[0.95rem] leading-[1.75] text-text-dim">
+              <p className="mt-1.5 text-[0.95rem] leading-relaxed text-muted">
                 {excerpt(post)}
               </p>
-              <span className="mt-3 inline-block font-mono text-[0.65rem] tracking-[0.15em] uppercase text-gold-dim transition-colors group-hover:text-gold">
-                Okumaya devam et →
-              </span>
             </Link>
           </article>
         ))}
       </div>
 
       {/* ── Diğer ── */}
-      <div className="mt-16 mb-6 flex items-center gap-4 font-display text-[0.7rem] tracking-[0.3em] uppercase text-gold after:h-px after:flex-1 after:bg-border">
+      <h2 className="mt-16 mb-4 font-mono text-[0.75rem] tracking-[0.2em] text-muted uppercase">
         Diğer
-      </div>
-      <p className="font-mono text-[0.78rem] text-text-dim">
+      </h2>
+      <p>
         <a
           href="/files/Temel_Sorunlar_Uzerine.pdf"
-          className="text-gold-dim underline decoration-gold-dim/50 underline-offset-4 hover:text-gold"
+          className="text-accent underline decoration-faint underline-offset-4 hover:decoration-accent"
         >
           Temel Sorunlar Üzerine (PDF)
         </a>

@@ -1,0 +1,17 @@
+export default function Logo({ size = 34 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 64 64"
+      role="img"
+      aria-label="Mukkadim logosu"
+    >
+      <rect width="64" height="64" rx="14" fill="#e5484d" />
+      <path
+        d="M22 50V14h13.2c6.9 0 11.8 4.3 11.8 10.6 0 6.4-4.9 10.7-11.8 10.7H29V50h-7Zm7-20.5h5.6c3.7 0 5.6-2 5.6-4.9s-1.9-4.8-5.6-4.8H29v9.7Z"
+        fill="#0e0d0c"
+      />
+    </svg>
+  );
+}

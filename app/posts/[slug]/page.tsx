@@ -33,25 +33,22 @@ export default async function PostPage({
 
   return (
     <>
-      <nav className="pt-12">
-        <Link
-          href="/"
-          className="font-mono text-[0.68rem] tracking-[0.15em] uppercase text-gold-dim transition-colors hover:text-gold"
-        >
-          ← Mukkadim
-        </Link>
-      </nav>
-
-      <article className="fade-up mt-10">
-        <header className="relative mb-10 border-b border-border pb-8 after:absolute after:-bottom-px after:left-0 after:h-[2px] after:w-20 after:bg-gold">
-          <div className="mb-4 flex flex-wrap items-baseline gap-x-4 font-mono text-[0.68rem] tracking-[0.12em] uppercase text-gold-dim">
-            <span>{formatDate(post.date)}</span>
-            <span className="text-muted">{post.readingMinutes} dk okuma</span>
-            {post.type && <span className="text-accent">{post.type}</span>}
-          </div>
-          <h1 className="font-display text-[clamp(1.4rem,3.5vw,2rem)] leading-[1.2] font-semibold text-cream">
+      <article className="fade-up mt-14">
+        <header className="mb-10">
+          <h1 className="font-bold leading-[1.15] tracking-tight text-4xl text-text text-balance sm:text-[2.75rem]">
             {post.title}
           </h1>
+          <div className="mt-4 flex flex-wrap items-center gap-x-3 font-mono text-[0.72rem] text-faint">
+            <time>{formatDate(post.date)}</time>
+            <span aria-hidden>·</span>
+            <span>{post.readingMinutes} dk okuma</span>
+            {post.type && (
+              <>
+                <span aria-hidden>·</span>
+                <span>{post.type}</span>
+              </>
+            )}
+          </div>
         </header>
 
         <div
@@ -63,7 +60,7 @@ export default async function PostPage({
       <nav className="mt-16">
         <Link
           href="/"
-          className="font-mono text-[0.68rem] tracking-[0.15em] uppercase text-gold-dim transition-colors hover:text-gold"
+          className="text-accent underline decoration-faint underline-offset-4 hover:decoration-accent"
         >
           ← Tüm yazılar
         </Link>

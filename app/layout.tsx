@@ -1,23 +1,17 @@
 import type { Metadata } from "next";
-import { EB_Garamond, Cinzel, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
+import Link from "next/link";
+import Logo from "@/components/logo";
 import "./globals.css";
 
-const garamond = EB_Garamond({
+const inter = Inter({
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-garamond",
-});
-
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-cinzel",
+  variable: "--font-inter",
 });
 
 const jetbrains = JetBrains_Mono({
   subsets: ["latin", "latin-ext"],
-  weight: ["300", "400"],
+  weight: ["400", "500"],
   variable: "--font-jetbrains",
 });
 
@@ -29,20 +23,31 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="tr" className={`${garamond.variable} ${cinzel.variable} ${jetbrains.variable}`}>
+    <html lang="tr" className={`${inter.variable} ${jetbrains.variable}`}>
       <body>
-        {/* Ambient glow */}
+        {/* Kırmızı ışık hâlesi */}
         <div
           aria-hidden
-          className="pointer-events-none fixed -top-[200px] -right-[200px] z-0 h-[600px] w-[600px] rounded-full"
+          className="pointer-events-none fixed -top-40 left-1/2 -z-10 h-[520px] w-[720px] -translate-x-1/2 rounded-full"
           style={{
             background:
-              "radial-gradient(circle, rgba(201,168,76,.06) 0%, transparent 70%)",
+              "radial-gradient(ellipse at center, rgba(229,72,77,0.10) 0%, transparent 65%)",
           }}
         />
-        <div className="relative z-1 mx-auto max-w-[780px] px-8 max-sm:px-5">
+        <div className="mx-auto max-w-[42rem] px-6 max-sm:px-5">
+          <nav className="flex items-center gap-3 pt-8">
+            <Link href="/" aria-label="Ana sayfa" className="transition-transform hover:scale-105">
+              <Logo size={34} />
+            </Link>
+            <Link
+              href="/"
+              className="font-semibold tracking-tight text-accent"
+            >
+              Mukkadim
+            </Link>
+          </nav>
           {children}
-          <footer className="mt-20 flex flex-wrap items-center justify-between gap-4 border-t border-border pt-10 pb-16 font-mono text-[0.7rem] tracking-[0.08em] text-muted">
+          <footer className="mt-24 flex flex-wrap items-center justify-between gap-4 border-t pt-8 pb-16 font-mono text-[0.72rem] text-muted">
             <span>padrosum@disroot.org</span>
             <span>
               © Alihan Padros Karakuş —{" "}
@@ -50,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 href="http://www.mustakildergi.com"
                 target="_blank"
                 rel="noopener"
-                className="text-gold-dim hover:text-gold"
+                className="text-accent underline decoration-faint underline-offset-3 hover:decoration-accent"
               >
                 Mustakil Dergi
               </a>
